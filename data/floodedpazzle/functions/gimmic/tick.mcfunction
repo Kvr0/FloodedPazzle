@@ -7,3 +7,6 @@
 ## ChangeFlag
     execute if data storage floodedpazzle: gimmic{changed:1b} run function #floodedpazzle:gimmic/changed
     data modify storage floodedpazzle: gimmic.changed set value 0b
+
+## Reset
+    function calculation:reset/_
