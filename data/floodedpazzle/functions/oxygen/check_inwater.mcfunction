@@ -2,11 +2,10 @@
 # @within function floodedpazzle:oxygen/tick
 
 ## In Water
-    execute anchored eyes if block ^ ^ ^ water if score @s floodedpazzle.oxygen matches 1.. run scoreboard players remove @s floodedpazzle.oxygen 1
+    execute anchored eyes if block ^ ^ ^ water run data modify storage floodedpazzle: input.oxygen.value set value 1
 
 ## In Air
-    execute anchored eyes unless block ^ ^ ^ water if score @s floodedpazzle.oxygen < @s floodedpazzle.maxoxygen run scoreboard players add @s floodedpazzle.oxygen 5
-    execute if score @s floodedpazzle.oxygen > @s floodedpazzle.maxoxygen run scoreboard players operation @s floodedpazzle.oxygen = @s floodedpazzle.maxoxygen
+    execute anchored eyes unless block ^ ^ ^ water run data modify storage floodedpazzle: input.oxygen.value set value -5
 
-## Run Out
-    execute if score @s floodedpazzle.oxygen matches 0 run function #floodedpazzle:oxygen/runout
+## 消費
+    function floodedpazzle:oxygen/consume/_

@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "floodedpazzle:gimmic/button/delete_all"
+        "floodedpazzle:gimmic/button/delete_all",
+        "floodedpazzle:gimmic/eye/delete_all"
     ]
 }
